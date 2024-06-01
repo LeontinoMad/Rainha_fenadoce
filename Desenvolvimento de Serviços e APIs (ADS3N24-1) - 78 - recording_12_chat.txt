@@ -1,0 +1,308 @@
+WEBVTT
+
+00:00:19.000 --> 00:00:19.900
+<v PABLO VINICIUS AVENCURT KONRATH>
+opa
+
+00:02:20.000 --> 00:02:20.900
+<v FELIPE GONÇALVES ZUNDLER>
+vais ter que mandar isolar teu quarto
+
+00:02:22.000 --> 00:02:22.900
+<v FELIPE GONÇALVES ZUNDLER>
+hahahahah
+
+00:02:30.000 --> 00:02:30.900
+<v FELIPE GONÇALVES ZUNDLER>
+fazer uma acustica isolada ai
+
+00:02:31.000 --> 00:02:31.900
+<v FELIPE GONÇALVES ZUNDLER>
+hahahah
+
+00:02:38.000 --> 00:02:38.900
+<v FELIPE GONÇALVES ZUNDLER>
+fibra de vidro
+
+00:02:40.000 --> 00:02:40.900
+<v FELIPE GONÇALVES ZUNDLER>
+sauhosaouhsaoush
+
+00:02:51.000 --> 00:02:51.900
+<v GUILHERME DA ROSA SILVA>
+De volta
+
+00:02:55.000 --> 00:02:55.900
+<v PABLO VINICIUS AVENCURT KONRATH>
+tem micro que faz isso 
+
+00:02:59.000 --> 00:02:59.900
+<v LEONARDO PEREZ OLIVEIRA DA LUZ>
+ue pensei que era vinho
+
+00:03:00.000 --> 00:03:00.900
+<v FELIPE GONÇALVES ZUNDLER>
+agua que o boi nao bebe
+
+00:03:01.000 --> 00:03:01.900
+<v GUILHERME DA ROSA SILVA>
+Cade o vinho
+
+00:03:02.000 --> 00:03:02.900
+<v FELIPE GONÇALVES ZUNDLER>
+hahahaha
+
+00:03:14.000 --> 00:03:14.900
+<v GUILHERME DA ROSA SILVA>
+O edécio deixou o vinho debaixo da mesa
+
+00:03:23.000 --> 00:03:23.900
+<v LEONARDO PEREZ OLIVEIRA DA LUZ>
+😂 
+
+00:03:24.000 --> 00:03:24.900
+<v GUILHERME DA ROSA SILVA>
+kkkk
+
+00:03:35.000 --> 00:03:35.900
+<v FELIPE GONÇALVES ZUNDLER>
+pra aguenta nós 
+
+00:03:37.000 --> 00:03:37.900
+<v FELIPE GONÇALVES ZUNDLER>
+hjahahahah
+
+00:16:12.000 --> 00:16:12.900
+<v GUILHERME DA ROSA SILVA>
+no meu era uma chave a mais
+
+00:16:23.000 --> 00:16:23.900
+<v GUILHERME DA ROSA SILVA>
+ali no lado do increment: 1
+
+00:16:27.000 --> 00:16:27.900
+<v GUILHERME DA ROSA SILVA>
+<a href="http://router.post" target="_blank" rel="noopener noreferrer" aria-label="router.post">router.post</a>("/", async (req, res) => {
+  const { candidataId, clienteId, justificativa } = req.body
+
+  if (!candidataId || !clienteId) {
+    res.status(400).json({ "erro": "Informe o Id da candidata e o Id do cliente" })
+    return
+  }
+
+  try {
+    const [voto, candidata] = await prisma.$transaction([
+      <a href="http://prisma.voto.create" target="_blank" rel="noopener noreferrer" aria-label="prisma.voto.create">prisma.voto.create</a>({data: {candidataId, clienteId, justificativa}}),
+      prisma.candidata.update({where: {id: candidataId}, data: {numVotos: {increment: 1}}})
+    ])
+    res.status(201).json()
+  } catch (error) {
+    res.status(400).json(error)
+  }
+})
+
+export default router
+
+00:18:49.000 --> 00:18:49.900
+<v GUILHERME DA ROSA SILVA>
+sim
+
+00:19:22.000 --> 00:19:22.900
+<v FELIPE GONÇALVES ZUNDLER>
+vai ter mais revisões no presencial na proxima semana ?
+
+00:23:46.000 --> 00:23:46.900
+<v GUILHERME DA ROSA SILVA>
+show
+
+00:24:03.000 --> 00:24:03.900
+<v FELIPE GONÇALVES ZUNDLER>
+maravilha
+
+00:24:10.000 --> 00:24:10.900
+<v GUILHERME DA ROSA SILVA>
+O meu só não mostrou o resultado ali na direita, mostra um string vazia
+
+00:24:19.000 --> 00:24:19.900
+<v GUILHERME DA ROSA SILVA>
+deve ser naquela parte de retornar um json
+
+00:25:11.000 --> 00:25:11.900
+<v GUILHERME DA ROSA SILVA>
+era isso
+
+00:25:25.000 --> 00:25:25.900
+<v GUILHERME DA ROSA SILVA>
+obrigado
+
+00:25:49.000 --> 00:25:49.900
+<v GUILHERME DA ROSA SILVA>
+Vamos
+
+00:25:56.000 --> 00:25:56.900
+<v GUILHERME DA ROSA SILVA>
+apostos e dispostos
+
+00:27:14.000 --> 00:27:14.900
+<v PABLO VINICIUS AVENCURT KONRATH>
+posso deixar private ou tem que ser public ?
+
+00:27:46.000 --> 00:27:46.900
+<v GUILHERME DA ROSA SILVA>
+pro vercel ler ne
+
+00:27:52.000 --> 00:27:52.900
+<v GUILHERME DA ROSA SILVA>
+por isso piublic
+
+00:27:58.000 --> 00:27:58.900
+<v PABLO VINICIUS AVENCURT KONRATH>
+entendi valeu 
+
+00:28:35.000 --> 00:28:35.900
+<v RODRIGO DUARTE GASTAUD>
+mas quando tu entra no vercel com a conta no git
+
+00:28:43.000 --> 00:28:43.900
+<v RODRIGO DUARTE GASTAUD>
+ele n tem acesso aos teus repositórios?
+
+00:28:51.000 --> 00:28:51.900
+<v RODRIGO DUARTE GASTAUD>
+dai podendo utilizar o repo privado?
+
+00:29:17.000 --> 00:29:17.900
+<v PABLO VINICIUS AVENCURT KONRATH>
+pasei muito rapido pelo vercel
+
+00:29:18.000 --> 00:29:18.900
+<v GUILHERME DA ROSA SILVA>
+Verdade, alguns lêem privado mas esse não sei
+
+00:33:48.000 --> 00:33:48.900
+<v EDECIO FERNANDO IEPSEN>
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.ts",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "(.*)",
+      "dest": "index.ts"
+    }
+  ]
+}
+
+00:36:01.000 --> 00:36:01.900
+<v EDECIO FERNANDO IEPSEN>
+    "vercel-build": "npx prisma migrate deploy",
+    "postinstall": "prisma generate"
+
+00:36:52.000 --> 00:36:52.900
+<v EDECIO FERNANDO IEPSEN>
+const port = process.env.PORT ?? 3000
+
+00:39:11.000 --> 00:39:11.900
+<v LEONARDO PEREZ OLIVEIRA DA LUZ>
+sim
+
+00:40:51.000 --> 00:40:51.900
+<v GUILHERME DA ROSA SILVA>
+feito
+
+00:42:55.000 --> 00:42:55.900
+<v GUILHERME DA ROSA SILVA>
+Calma ai me perdi um pouquinho porque a tela inicial apos criar a conta e um pouco diferente
+
+00:48:16.000 --> 00:48:16.900
+<v GUILHERME DA ROSA SILVA>
+Show
+
+00:48:23.000 --> 00:48:23.900
+<v EDECIO FERNANDO IEPSEN>
+<a href="https://rainha-fenadoce-noite-24.vercel.app/votos" target="_blank" rel="noopener noreferrer" aria-label="rainha-fenadoce-noite-24.vercel.app/votos">rainha-fenadoce-noite-24.vercel.app/votos</a>
+
+00:48:28.000 --> 00:48:28.900
+<v GERSON FARIAS CLARA>
+muito legal ver funcionando, só é um pouco trabalhoso kkk
+
+00:48:28.000 --> 00:48:28.900
+<v GUILHERME DA ROSA SILVA>
+Consegui já, esqueci de dizer
+
+00:48:35.000 --> 00:48:35.900
+<v GUILHERME DA ROSA SILVA>
+não precisa mais
+
+00:48:38.000 --> 00:48:38.900
+<v GUILHERME DA ROSA SILVA>
+valeu
+
+00:49:16.000 --> 00:49:16.900
+<v GUILHERME DA ROSA SILVA>
+Os dois terminais abertos kkkkk
+
+00:49:55.000 --> 00:49:55.900
+<v GUILHERME DA ROSA SILVA>
+muito legal
+
+00:51:43.000 --> 00:51:43.900
+<v PABLO VINICIUS AVENCURT KONRATH>
+achei muito bacana, to saindo aqui depois eu vejo oque ficou de exercicios , boa noite  a todos 
+
+00:56:04.000 --> 00:56:04.900
+<v LEONARDO PEREZ OLIVEIRA DA LUZ>
+sim
+
+00:56:05.000 --> 00:56:05.900
+<v GUILHERME DA ROSA SILVA>
+Certo
+
+00:56:14.000 --> 00:56:14.900
+<v GERSON FARIAS CLARA>
+entendido
+
+00:56:19.000 --> 00:56:19.900
+<v LEONARDO PEREZ OLIVEIRA DA LUZ>
+entao ta professor nos vemos na a
+
+00:56:23.000 --> 00:56:23.900
+<v JOAO VITOR DOLINSKI DA SILVA>
+Beleza
+
+00:56:25.000 --> 00:56:25.900
+<v LEONARDO PEREZ OLIVEIRA DA LUZ>
+semana que vem
+
+00:56:31.000 --> 00:56:31.900
+<v LEONARDO PEREZ OLIVEIRA DA LUZ>
+nao capaz
+
+00:56:36.000 --> 00:56:36.900
+<v DIEIZON OLIVEIRA SILVEIRA>
+Blz.
+
+00:56:38.000 --> 00:56:38.900
+<v LEONARDO PEREZ OLIVEIRA DA LUZ>
+é que chegou o lanche
+
+00:56:51.000 --> 00:56:51.900
+<v JOAO VITOR DOLINSKI DA SILVA>
+Boa noite professor
+
+00:56:55.000 --> 00:56:55.900
+<v JOAO VITOR DOLINSKI DA SILVA>
+Até segunda
+
+00:56:57.000 --> 00:56:57.900
+<v PEDRO DOS SANTOS PEREIRA>
+Boa noite professor
+
+00:57:01.000 --> 00:57:01.900
+<v DIEIZON OLIVEIRA SILVEIRA>
+Boa Noite! valeu
+
